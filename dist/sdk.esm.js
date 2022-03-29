@@ -10,7 +10,7 @@ import { keccak256, pack } from '@ethersproject/solidity';
 import { Contract } from '@ethersproject/contracts';
 import { getNetwork } from '@ethersproject/networks';
 import { getDefaultProvider } from '@ethersproject/providers';
-import IPancakePair from '@champagneswap/champagne-swap-core/build/IChampagnePair.json';
+import IChampagnePair from '@champagneswap/champagne-swap-core/build/IChampagnePair.json';
 
 var _SOLIDITY_TYPE_MAXIMA;
 var ChainId;
@@ -35,8 +35,8 @@ var Rounding;
   Rounding[Rounding["ROUND_UP"] = 2] = "ROUND_UP";
 })(Rounding || (Rounding = {}));
 
-var FACTORY_ADDRESS = '0x2Ef80218355115F1F21e26b98382B7c1edB15f3c';
-var INIT_CODE_HASH = '0x37bddd809d27a8906637f5bf08d2e7c61f92d8ec7d47ede6eb05059fad46c52e';
+var FACTORY_ADDRESS = '0xb31A337f1C3ee7fA2b2B83c6F8ee0CA643D807a0';
+var INIT_CODE_HASH = '0xc38763227c2afda0c1fb151a19a4962f163753e6fc37fc982cbe1587e3c93809';
 var MINIMUM_LIQUIDITY = /*#__PURE__*/JSBI.BigInt(1000); // exports for internal consumption
 
 var ZERO = /*#__PURE__*/JSBI.BigInt(0);
@@ -436,7 +436,7 @@ function currencyEquals(currencyA, currencyB) {
     return currencyA === currencyB;
   }
 }
-var WETH = (_WETH = {}, _WETH[ChainId.MAINNET] = /*#__PURE__*/new Token(ChainId.MAINNET, '0x7cF7FF7A0AFA9264D5a3502c21441219c2c2020e', 18, 'WBNB', 'Wrapped BNB', 'https://www.binance.org'), _WETH[ChainId.TESTNET] = /*#__PURE__*/new Token(ChainId.TESTNET, '0x7cF7FF7A0AFA9264D5a3502c21441219c2c2020e', 18, 'WBNB', 'Wrapped BNB', 'https://www.binance.org'), _WETH);
+var WETH = (_WETH = {}, _WETH[ChainId.MAINNET] = /*#__PURE__*/new Token(ChainId.MAINNET, '0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c', 18, 'WBNB', 'Wrapped BNB', 'https://www.binance.org'), _WETH[ChainId.TESTNET] = /*#__PURE__*/new Token(ChainId.TESTNET, '0x7cF7FF7A0AFA9264D5a3502c21441219c2c2020e', 18, 'WBNB', 'Wrapped BNB', 'https://www.binance.org'), _WETH);
 
 var _toSignificantRoundin, _toFixedRounding;
 var Decimal = /*#__PURE__*/toFormat(_Decimal);
@@ -1553,7 +1553,7 @@ var Fetcher = /*#__PURE__*/function () {
       if (provider === undefined) provider = getDefaultProvider(getNetwork(tokenA.chainId));
       !(tokenA.chainId === tokenB.chainId) ? process.env.NODE_ENV !== "production" ? invariant(false, 'CHAIN_ID') : invariant(false) : void 0;
       var address = Pair.getAddress(tokenA, tokenB);
-      return Promise.resolve(new Contract(address, IPancakePair.abi, provider).getReserves()).then(function (_ref) {
+      return Promise.resolve(new Contract(address, IChampagnePair.abi, provider).getReserves()).then(function (_ref) {
         var reserves0 = _ref[0],
             reserves1 = _ref[1];
         var balances = tokenA.sortsBefore(tokenB) ? [reserves0, reserves1] : [reserves1, reserves0];

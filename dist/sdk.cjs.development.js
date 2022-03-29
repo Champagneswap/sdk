@@ -35,8 +35,8 @@ var _SOLIDITY_TYPE_MAXIMA;
   Rounding[Rounding["ROUND_UP"] = 2] = "ROUND_UP";
 })(exports.Rounding || (exports.Rounding = {}));
 
-var FACTORY_ADDRESS = '0x3e2892A8Fe426B1614e44dFF39e0a01483B6d90E';
-var INIT_CODE_HASH = '0xf69dfd5478e18ac8fb28de6f80e2f0efd1f5aa25b0bd01e45a4fa0c66b9364aa';
+var FACTORY_ADDRESS = '0xb31A337f1C3ee7fA2b2B83c6F8ee0CA643D807a0';
+var INIT_CODE_HASH = '0xc38763227c2afda0c1fb151a19a4962f163753e6fc37fc982cbe1587e3c93809';
 var MINIMUM_LIQUIDITY = /*#__PURE__*/JSBI.BigInt(1000); // exports for internal consumption
 
 var ZERO = /*#__PURE__*/JSBI.BigInt(0);
@@ -436,7 +436,7 @@ function currencyEquals(currencyA, currencyB) {
     return currencyA === currencyB;
   }
 }
-var WETH = (_WETH = {}, _WETH[exports.ChainId.MAINNET] = /*#__PURE__*/new Token(exports.ChainId.MAINNET, '0x7cF7FF7A0AFA9264D5a3502c21441219c2c2020e', 18, 'WBNB', 'Wrapped BNB', 'https://www.binance.org'), _WETH[exports.ChainId.TESTNET] = /*#__PURE__*/new Token(exports.ChainId.TESTNET, '0x7cF7FF7A0AFA9264D5a3502c21441219c2c2020e', 18, 'WBNB', 'Wrapped BNB', 'https://www.binance.org'), _WETH);
+var WETH = (_WETH = {}, _WETH[exports.ChainId.MAINNET] = /*#__PURE__*/new Token(exports.ChainId.MAINNET, '0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c', 18, 'WBNB', 'Wrapped BNB', 'https://www.binance.org'), _WETH[exports.ChainId.TESTNET] = /*#__PURE__*/new Token(exports.ChainId.TESTNET, '0x7cF7FF7A0AFA9264D5a3502c21441219c2c2020e', 18, 'WBNB', 'Wrapped BNB', 'https://www.binance.org'), _WETH);
 
 var _toSignificantRoundin, _toFixedRounding;
 var Decimal = /*#__PURE__*/toFormat(_Decimal);
@@ -1370,7 +1370,7 @@ function toHex(currencyAmount) {
 
 var ZERO_HEX = '0x0';
 /**
- * Represents the Champagne Router, and has static methods for helping execute trades.
+ * Represents the Pancake Router, and has static methods for helping execute trades.
  */
 
 var Router = /*#__PURE__*/function () {
